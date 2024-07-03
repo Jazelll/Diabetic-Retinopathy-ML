@@ -1,0 +1,63 @@
+{% extends "layout/base.html" %} 
+
+{% block title %} <h1>Evaluation Form</h1> {% endblock %}
+
+{% block content %}
+<div class="evaluation_ctn">
+
+
+  <form method="POST" action="{% url 'result' %}">
+    {% csrf_token %}
+    <label for="Gender">Gender:</label>
+    <select id="Floaters" name="Floaters" required>
+      <option value="1">Male</option>
+      <option value="0">Female</option></select
+    ><br /><br />
+
+    <!-- <input type="text" id="Gender" name="Gender" required /><br /> -->
+
+    <label for="Age">Age:</label>
+    <input type="text" id="Age" name="Age" required /><br /><br />
+
+    <label for="Floaters">Do you have Floaters?</label>
+    <select id="Floaters" name="Floaters" required>
+      <option value="1">Yes</option>
+      <option value="0">No</option></select
+    ><br /><br />
+
+    <label for="Burred_Vision">Do you have Blurred_Vision?</label>
+    <select id="Burred_Vision" name="Burred_Vision" required>
+      <option value="1">Yes</option>
+      <option value="0">No</option></select
+    ><br /><br />
+
+    <label for="Fluctuating_Vision">Do you have Fluctuating_Vision?</label
+    >
+    <select id="Fluctuating_Vision" name="Fluctuating_Vision" required>
+      <option value="1">Yes</option>
+      <option value="0">No</option></select
+    ><br /><br />
+
+    <label for="Impaired_Color_Vision">Do you have Impaired_Color_Vision?</label
+    >
+    <select id="Impaired_Color_Vision" name="Impaired_Color_Vision" required>
+      <option value="1">Yes</option>
+      <option value="0">No</option></select
+    ><br /><br />
+
+    <label for="Empty_Areas">Do you have Empty_Areas?</label>
+    <select id="Empty_Areas" name="Empty_Areas" required>
+      <option value="1">Yes</option>
+      <option value="0">No</option></select
+    ><br /><br />
+
+    <label for="Vision_Loss">Do you have Vision_Loss?</label><br />
+    <select id="Vision_Loss" name="Vision_Loss" required>
+      <option value="1">Yes</option>
+      <option value="0">No</option></select
+    ><br /><br />
+
+    <input type="submit" value="Predict" />
+  </form>
+</div>
+{% endblock %}

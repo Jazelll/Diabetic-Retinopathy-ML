@@ -1,0 +1,12 @@
+{% extends "layout/base.html" %} 
+
+{% block title %} <h1>Prediction Result</h1>{% endblock %}
+
+{% block content %}
+
+<div class="result_ctn">
+  <p>{{ result.prediction_text }}</p>
+  <p><strong>Prediction:</strong> {{ result.prediction }}</p>
+</div>
+
+{% endblock %}
